@@ -15,14 +15,15 @@
         
         @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
 
-        body, html {
+        html {
             margin:0;
             min-height: 100%;
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg.svg");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            font-family: Slackey, sans-serif;
+            font-family: Helvetica, sans-serif;
+            scroll-behavior: smooth;
         }
 
         * {
@@ -97,19 +98,20 @@
         }
 
         .centered {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 720px;
-          margin: 20px;
-          flex-flow: wrap;
-          flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 720px;
+            margin: 20px;
+            flex-flow: wrap;
+            flex-direction: column;
         }
 
         .glow-on-hover {
-            width: 200px;
-            height: 50px;
+            width: 256px;
+            height: 64px;
             border: none;
+            border-radius: 32px;
             outline: none;
             margin: 5px;
             color: white;
