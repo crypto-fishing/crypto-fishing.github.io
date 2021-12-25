@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Token sale page">
+
+    <title>Crypto Fishing</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+   
+    <script>
+        var test = false; // False if contracts are on Mainnet
+        var contractAddressSale = '0x31a4138e6aa00fB5C5B14Fd5FFA9FE478C980a10';
+        var contractAddressToken = '0x4B727C5b7ac9AF726156b19e90e9895A49d671f7';
+    </script>
+    
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+        
+        html, body {
+          min-height: 100%;
+          background-color: white;
+          font-family: Slackey, sans-serif;
+          color: black;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .img-center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+        input[type=number] {
+          width: 200px;
+          box-sizing: border-box;
+          border: 2px solid #3984c6;
+          border-radius: 16px;
+          font-size: 28px;
+          font-weight: 700;
+          text-align: center;
+          color: black;
+          background-color: white;
+          padding: 12px 20px 12px 40px;
+          transition: width 0.4s ease-in-out;
+        }
+
+        input[type=number]:focus {
+          width: 50%;
+        }
+        
+        .buy-btn {
+          display: inline-block;
+          border-radius: 36px;
+          color: #3984c6;
+          background-color: white;
+          border: 2px solid #3984c6;
+          text-align: center;
+          font-size: 28px;
+          padding: 20px;
+          width: 200px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+          font-family: Slackey, sans-serif;
+        }
+
+        .buy-btn span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+
+        .buy-btn span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+
+        .buy-btn:hover span {
+          padding-right: 25px;
+        }
+
+        .buy-btn:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+
+        h1 { font-size: 48px; font-weight: 700; color: #3984c6;}
+        h2 { font-size: 24px; font-weight: 500; color: #3984c6;}
+
+        .small {
+            font-size: 12px;
+        }
+
+        .err {
+             color: red;
+        }
+        
+        .green {
+             color: green;
+        }
+        
+        .blue {
+             color: blue;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+        
+        .clickable {
+            cursor: pointer;
+        }
+        
+        .clickable:hover {
+            color: #C0C0C0;
+        }
+        
+        button {
+          background-color: white;
+          border: 2px solid #3984c6;
+          border-radius: 2px;
+          padding: 5px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          margin: 4px 2px;
+          cursor: pointer;
+          font-family: Slackey, sans-serif;
+          color: #3984c6;
+        }
+        
+        button:hover {
+          color: white;
+          background-color: #3984c6;
+        }
+        
+        button[disabled] {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+    
+    <div style="text-align: center">
+      <button id="connect" style="font-size: 12px">Connect</button> <button class="switch" id="addMainBSC" style="font-size: 12px;">To BSC Mainnet</button>
+      <span id="nometamask" class="err" style="display: none">Please install Metamask first...</span>
+      <div class="network small"><span id="curnet"><span class="err">Please use DApp browser/extension (e.g. <a target="_blank" href="https://metamask.io">Metamask</a>)</span></span></div>
+    </div>
+    
+    <div style="text-align: center">
+      <img src="title.jpg" alt="" class="img-center">
+      <p>0x4B727C5b7ac9AF726156b19e90e9895A49d671f7</p>
+      <p><button id="addToken" style="text-align: center">Add to Metamask</button> <button id="copyToken" style="text-align: center">Copy address</button></p>
+    </div>
+    
+    <div style="text-align: center">
+      <h1>Buy tokens</h1>
+      <p>1 BNB = <span class="rate">3500.0</span> <span class="tokenSymbol">CFG</span></p>
+      <p><input type="number" id="buyAmount" value="0" min="0"></p>
+      <p>You get: <span id="get">0</span> <span class="tokenSymbol">CFG</span></p>
+      <p><button id="buyBtn" class="buy-btn" style="vertical-align:middle"><span>Buy</span></button></p>
+    </div>
+    
+<script src='https://dappbuilder.org/js/jquery-3.6.0.min.js' type="text/javascript" charset="utf-8"></script>
+<script src='https://dappbuilder.org/js/ethers-5.0.umd.min.js' type="text/javascript" charset="utf-8"></script>
+<script src='https://dappbuilder.org/bsc/tokensale2/js/tokensale.ui.js' type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
