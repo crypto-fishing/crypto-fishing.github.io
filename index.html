@@ -173,6 +173,15 @@
             font-family: Helvetica, sans-serif;
         }
 
+        .hidesb::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hidesb {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
         .card button {
             border: 2px solid white;
             border-radius: 36px;
@@ -401,21 +410,21 @@
             <img src="H.png" alt="Common Egg" style="width:40%">
             <h2>Common Egg</h2>
             <p class="price">0.01 BNB</p>
-            <p class="txt-overflow">The first of three eggs, a common egg ensures you a common rarity fish that is the lowest rarity.</p>
+            <p class="txt-overflow hidesb">The first of three eggs, a common egg ensures you a common rarity fish that is the lowest rarity.</p>
             <p><button>Buy</button></p>
         </div>
         <div class="card">
             <img src="H2.png" alt="Epic Egg" style="width:40%">
             <h2>Epic Egg</h2>
             <p class="price">0.02 BNB</p>
-            <p class="txt-overflow">The second of three eggs. An epic egg guarantees you a fish of epic rarity which is the intermediate rarity.</p>
+            <p class="txt-overflow hidesb">The second of three eggs. An epic egg guarantees you a fish of epic rarity which is the intermediate rarity.</p>
             <p><button>Buy</button></p>
         </div>
         <div class="card">
             <img src="H3.png" alt="Legendary Egg" style="width:40%">
             <h2>Legendary Egg</h2>
             <p class="price">0.03 BNB</p>
-            <p class="txt-overflow">The third of three eggs, a legendary egg ensures you a fish of legendary rarity which is the highest rarity that exists in the world of Crypto Fishing.</p>
+            <p class="txt-overflow hidesb">The third of three eggs, a legendary egg ensures you a fish of legendary rarity which is the highest rarity that exists in the world of Crypto Fishing.</p>
             <p><button>Buy</button></p>
         </div>
     </div>
