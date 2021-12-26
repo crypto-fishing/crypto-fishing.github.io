@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
 <head>
 
     <meta charset="UTF-8">
@@ -563,6 +566,46 @@
         </div>
       </div>
     </div>
+
+    <hr>
+
+    <h2>Token Rewards</h2>
+    <div class="centered-box">
+        <canvas id="rewards" style="width:90%"></canvas>
+    </div>
+
+    <script>
+        var xValues = ["IDO Listing", "Public Sale", "Liquidity Pool", "Advisors", "Team", "Marketing", "FEG Anti Deep Pool", "Airdrop"];
+        var yValues = [10, 20, 20, 10, 10, 7, 13, 10];
+        var barColors = [
+        "maroon",
+        "fuchsia",
+        "cyan",
+        "forestgreen",
+        "gold",
+        "indigo",
+        "orange",
+        "salmon"
+        ];
+
+        Chart.defaults.global.defaultFontColor = 'white';
+        new Chart("rewards", {
+        type: "pie",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: ""
+            }
+        }
+        });
+    </script>
 
     <div class="footer">
       <p>Join the conversation 😎</p>
