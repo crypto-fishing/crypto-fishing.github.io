@@ -81,14 +81,14 @@
         }
 
         h1 {
-          font-size: 6vw;
+          font-size: 64px;
           font-family: Slackey, sans-serif;
           color: white;
           text-align: center;
         }
 
         h2 {
-          font-size: 3vw;
+          font-size: 48px;
           font-family: Slackey, sans-serif;
           color: white;
           text-align: center;
@@ -97,7 +97,7 @@
         p {
             text-align: center;
             font-family: Helvetica, sans-serif;
-            font-size: 2vw;
+            font-size: 32px;
             color: white;
         }
 
@@ -110,12 +110,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .centered {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 720px;
             margin: 20px;
             flex-flow: wrap;
@@ -123,21 +117,20 @@
         }
 
         .glow-on-hover {
-            width: 256px;
-            height: 64px;
+            width: 260px;
             border: none;
-            border-radius: 48px;
+            border-radius: 36px;
             outline: none;
+            padding: 16px;
             margin: 5px;
             color: white;
             background-color: rgba(0, 0, 0, 0.4);
             text-align: center;
-            font-size: 32px;
+            font-size: 48px;
             font-family: Helvetica, sans-serif;
             cursor: pointer;
             position: relative;
             z-index: 0;
-            border-radius: 10px;
         }
 
         .glow-on-hover:before {
@@ -154,7 +147,7 @@
             animation: glowing 20s linear infinite;
             opacity: 0;
             transition: opacity .3s ease-in-out;
-            border-radius: 10px;
+            border-radius: 36px;
         }
 
         .glow-on-hover:active {
@@ -178,7 +171,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             left: 0;
             top: 0;
-            border-radius: 10px;
+            border-radius: 36px;
         }
 
         @keyframes glowing {
@@ -197,7 +190,7 @@
 
         .price {
             color: #FFD700;
-            font-size: 3vw;
+            font-size: 48px;
             font-family: Barlow, sans-serif;
             font-weight: 700;
         }
@@ -206,12 +199,13 @@
             text-align: center;
             color: white;
             width: 100%;
-            min-height: 5vw;
-            max-height: 5vw;
+            min-height: 96px;
+            max-height: 96px;
             overflow: auto;
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
             font-family: Helvetica, sans-serif;
+            font-size: 28px;
         }
 
         .txt-overflow::-webkit-scrollbar {
@@ -295,9 +289,9 @@
           top: 22px;
           width: 0;
           right: 30px;
-          border: medium solid white;
+          border: medium solid rgba(0, 0, 0, 0.4);
           border-width: 10px 0 10px 10px;
-          border-color: transparent transparent transparent white;
+          border-color: transparent transparent transparent rgba(0, 0, 0, 0.4);
         }
         
         .right::before {
@@ -307,9 +301,9 @@
           top: 22px;
           width: 0;
           left: 30px;
-          border: medium solid white;
+          border: medium solid rgba(0, 0, 0, 0.4);
           border-width: 10px 10px 10px 0;
-          border-color: transparent white transparent transparent;
+          border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent;
         }
 
         .right::after {
@@ -358,9 +352,9 @@
           
           .container::before {
           left: 60px;
-          border: medium solid white;
+          border: medium solid rgba(0, 0, 0, 0.4);
           border-width: 10px 10px 10px 0;
-          border-color: transparent white transparent transparent;
+          border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent;
           }
 
           .left::after, .right::after {
@@ -396,8 +390,8 @@
 
     <div class="main" id="home">
 
-    <div class="centered">
-      <img src="logo.png">
+    <div class="centered-box">
+      <img src="logo.webp">
       <h2>A blockchain game with a fish theme</h2>
       <button class="glow-on-hover">Buy now</button>
     </div>
@@ -406,13 +400,11 @@
 
     <div class="centered-box">
         <p>
-        Crypto Fishing is an NFT play-to-earn game with a fish theme, in which you can perform multiple tasks with them such as raising, caring, battles and other tasks. Coming soon on your favorite app store.
+        Crypto Fishing is an NFT play-to-earn game with a fish theme, in which you can perform multiple tasks with them such as raising, caring, battles and other tasks. Coming soon on your favorite app store.<br>
+        <img src="apple.webp">
+        <img src="android.webp">
+        <img src="windows.webp">
         </p>
-    </div>
-    <div class="centered-box">
-        <img src="apple.png">
-        <img src="google-play.png">
-        <img src="windows.png">
     </div>
 
     <hr id="nft">
@@ -421,28 +413,28 @@
         <h2>NFT PORTFOLIO</h2>
         <p>Check out available NFTs to start gaming.</p>
         <div class="card">
-            <img src="H.png" alt="Common Egg">
+            <img src="nft1.webp" alt="Common Egg">
             <h2>Common Egg</h2>
             <p class="price">0.091 BNB</p>
             <p class="txt-overflow">The first of three eggs, a common egg ensures you a common rarity fish that is the lowest rarity.</p>
             <p><button>Buy</button></p>
         </div>
         <div class="card">
-            <img src="H2.png" alt="Epic Egg">
+            <img src="nft2.webp" alt="Epic Egg">
             <h2>Epic Egg</h2>
             <p class="price">0.182 BNB</p>
             <p class="txt-overflow">The second of three eggs. An epic egg guarantees you a fish of epic rarity which is the intermediate rarity.</p>
             <p><button>Buy</button></p>
         </div>
         <div class="card">
-            <img src="H3.png" alt="Legendary Egg">
+            <img src="nft3.webp" alt="Legendary Egg">
             <h2>Legendary Egg</h2>
             <p class="price">0.273 BNB</p>
             <p class="txt-overflow">The third of three eggs, a legendary egg ensures you a fish of legendary rarity which is the highest rarity that exists in the world of Crypto Fishing.</p>
             <p><button>Buy</button></p>
         </div>
         <div class="card">
-            <img src="tank.png" alt="Empty fish tank">
+            <img src="nft0.webp" alt="Empty fish tank">
             <h2>Fish tank</h2>
             <p class="price">0.821 BNB</p>
             <p class="txt-overflow">An empty fish tank to raise your fish.</p>
@@ -507,10 +499,10 @@
     </div>
 
     <div class="footer">
-      <h2>Join the conversation</h2>
-      <a href="https://twitter.com/CryptoFishingio"><img src="twitter.png"></a>
-      <a href="https://t.me/Crypt0Fishingbot?start=r08875315470"><img src="telegram.png"></a>
-      <a href="#"><img src="discord.png"></a>
+      <p>Join the conversation 😎</p>
+      <a href="https://twitter.com/CryptoFishingio"><img src="twitter.webp"></a>
+      <a href="https://t.me/Crypt0Fishingbot?start=r08875315470"><img src="telegram.webp"></a>
+      <a href="#"><img src="discord.webp"></a>
     </div>
 
     </div>
