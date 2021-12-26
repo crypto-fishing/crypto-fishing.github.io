@@ -126,26 +126,24 @@
             flex-direction: column;
         }
 
-        .glow-on-hover {
-            width: 260px;
-            border: none;
-            border-radius: 36px;
-            outline: none;
-            padding: 16px;
-            margin: 5px;
-            color: white;
+        .btn-glow {
             background-color: rgba(0, 0, 0, 0.4);
+            border: 2px solid white;
+            border-radius: 16px;
+            padding: 5px 20px;
             text-align: center;
-            font-size: 48px;
-            font-family: Helvetica, sans-serif;
+            text-decoration: none;
+            margin: 4px 2px;
             cursor: pointer;
+            font-family: Helvetica, sans-serif;
+            color: white;
             position: relative;
             z-index: 0;
         }
 
-        .glow-on-hover:before {
+        .btn-glow:before {
             content: '';
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            background: linear-gradient(45deg, turquoise, navy, indigo, cyan, blue, aqua, midnightblue);
             position: absolute;
             top: -2px;
             left:-2px;
@@ -154,25 +152,25 @@
             filter: blur(5px);
             width: calc(100% + 4px);
             height: calc(100% + 4px);
-            animation: glowing 20s linear infinite;
+            animation: glowing 21s linear infinite;
             opacity: 0;
             transition: opacity .3s ease-in-out;
-            border-radius: 36px;
+            border-radius: 16px;
         }
 
-        .glow-on-hover:active {
+        .btn-glow:active {
             color: black;
         }
 
-        .glow-on-hover:active:after {
+        .btn-glow:active:after {
             background: transparent;
         }
 
-        .glow-on-hover:hover:before {
+        .btn-glow:hover:before {
             opacity: 1;
         }
 
-        .glow-on-hover:after {
+        .btn-glow:after {
             z-index: -1;
             content: '';
             position: absolute;
@@ -181,7 +179,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             left: 0;
             top: 0;
-            border-radius: 36px;
+            border-radius: 16px;
         }
 
         @keyframes glowing {
@@ -440,7 +438,7 @@
     <div class="centered-box">
       <img src="logo.webp">
       <h2>A blockchain game with a fish theme</h2>
-      <button class="glow-on-hover">Buy now</button>
+      <button class="btn-glow" style="width:200px;height:64px;font-size:32px">Buy now</button>
     </div>
 
     <hr>
@@ -485,28 +483,28 @@
             <h3>Common Egg</h3>
             <p class="price">0.091 BNB</p>
             <p class="txt-overflow">The first of three eggs, a common egg ensures you a common rarity fish that is the lowest rarity.</p>
-            <p><button>Buy</button></p>
+            <p><button class="btn-glow" style="width:100px;height:50px;font-size:24px">Buy</button></p>
         </div>
         <div class="collage-col">
             <img src="nft2.webp" alt="Epic Egg">
             <h3>Epic Egg</h3>
             <p class="price">0.182 BNB</p>
             <p class="txt-overflow">The second of three eggs. An epic egg guarantees you a fish of epic rarity which is the intermediate rarity.</p>
-            <p><button>Buy</button></p>
+            <p><button class="btn-glow" style="width:100px;height:50px;font-size:24px">Buy</button></p>
         </div>
         <div class="collage-col">
             <img src="nft3.webp" alt="Legendary Egg">
             <h3>Legendary Egg</h3>
             <p class="price">0.273 BNB</p>
             <p class="txt-overflow">The third of three eggs, a legendary egg ensures you a fish of legendary rarity which is the highest rarity that exists in the world of Crypto Fishing.</p>
-            <p><button>Buy</button></p>
+            <p><button class="btn-glow" style="width:100px;height:50px;font-size:24px">Buy</button></p>
         </div>
         <div class="collage-col">
             <img src="nft0.webp" alt="Empty fish tank">
             <h3>Fish tank</h3>
             <p class="price">0.821 BNB</p>
             <p class="txt-overflow">An empty fish tank to raise your fish.</p>
-            <p><button>Buy</button></p>
+            <p><button class="btn-glow" style="width:100px;height:50px;font-size:24px">Buy</button></p>
         </div>
     </div>
 
