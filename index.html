@@ -16,13 +16,25 @@
 
         html {
             margin:0;
+            min-width: 100%;
             min-height: 100%;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             font-family: Helvetica, sans-serif;
             scroll-behavior: smooth;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         * {
@@ -473,6 +485,7 @@
 
     <div class="footer">
       <h2>Join the conversation</h2>
+      <a href="https://twitter.com/fishingcrypto1"><img src="twitter.png"></a>
       <a href="https://t.me/Crypt0Fishingbot?start=r08875315470"><img src="telegram.png"></a>
       <a href="#"><img src="discord.png"></a>
     </div>
