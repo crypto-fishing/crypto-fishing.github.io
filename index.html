@@ -97,6 +97,13 @@
           text-align: center;
         }
 
+        h3 {
+          font-size: 32px;
+          font-family: Slackey, sans-serif;
+          color: white;
+          text-align: center;
+        }
+
         p {
             text-align: center;
             font-family: Helvetica, sans-serif;
@@ -183,9 +190,32 @@
             100% { background-position: 0 0; }
         }
 
+        .collage-row {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: nowrap; /* IE10 */
+            flex-wrap: nowrap;
+            padding: 0 4px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .collage-col {
+            -ms-flex: 25%; /* IE10 */
+            flex: 25%;
+            max-width: 25%; /* Create four equal columns that sits next to each other */
+            padding: 0 4px;
+        }
+
+        .collage-col img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
         .card {
             width: 50%;
-            float: left;
+            float: none;
             margin: auto;
             text-align: center;
             font-family: Helvetica, sans-serif;
@@ -215,7 +245,7 @@
             display: none;
         }
 
-        .card button {
+        button {
             border: 2px solid white;
             border-radius: 36px;
             outline: 0;
@@ -228,7 +258,7 @@
             width: 100px;
         }
 
-        .card button:hover {
+        button:hover {
             background-color: #118C4F;
         }
 
@@ -343,31 +373,45 @@
         }
 
         @media screen and (max-width: 600px) {
-          .timeline::after {
-          left: 31px;
-          }
-          
-          .container {
-          width: 100%;
-          padding-left: 70px;
-          padding-right: 25px;
-          }
-          
-          .container::before {
-          left: 60px;
-          border: medium solid rgba(0, 0, 0, 0.4);
-          border-width: 10px 10px 10px 0;
-          border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent;
-          }
 
-          .left::after, .right::after {
-          left: 15px;
-          }
-          
-          .right {
-          left: 0%;
-          }
+            .collage-col {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
 
+            .timeline::after {
+            left: 31px;
+            }
+
+            .container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+            }
+
+            .container::before {
+            left: 60px;
+            border: medium solid rgba(0, 0, 0, 0.4);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent;
+            }
+
+            .left::after, .right::after {
+            left: 15px;
+            }
+
+            .right {
+            left: 0%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+        .collage-col {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+            }
         }
 
         .footer {
@@ -413,35 +457,53 @@
         </p>
     </div>
 
+    <hr>
+
+    <h2>SCREENSHOTS</h2>
+    <div class="collage-row">
+        <div class="collage-col">
+            <img src="1.png" style="width:100%">
+            <img src="2.PNG" style="width:100%">
+        </div>
+        <div class="collage-col">
+            <img src="3.PNG" style="width:100%">
+            <img src="4.PNG" style="width:100%">
+        </div>
+        <div class="collage-col">
+            <img src="5.PNG" style="width:100%">
+            <img src="6.PNG" style="width:100%">
+        </div>
+    </div>
+
     <hr id="nft">
 
-    <div class="row">
-        <h2>NFT PORTFOLIO</h2>
-        <p>Check out available NFTs to start gaming.</p>
-        <div class="card">
+    <h2>NFT PORTFOLIO</h2>
+    <p>Check out available NFTs to start gaming.</p>
+    <div class="collage-row">
+        <div class="collage-col">
             <img src="nft1.webp" alt="Common Egg">
-            <h2>Common Egg</h2>
+            <h3>Common Egg</h3>
             <p class="price">0.091 BNB</p>
             <p class="txt-overflow">The first of three eggs, a common egg ensures you a common rarity fish that is the lowest rarity.</p>
             <p><button>Buy</button></p>
         </div>
-        <div class="card">
+        <div class="collage-col">
             <img src="nft2.webp" alt="Epic Egg">
-            <h2>Epic Egg</h2>
+            <h3>Epic Egg</h3>
             <p class="price">0.182 BNB</p>
             <p class="txt-overflow">The second of three eggs. An epic egg guarantees you a fish of epic rarity which is the intermediate rarity.</p>
             <p><button>Buy</button></p>
         </div>
-        <div class="card">
+        <div class="collage-col">
             <img src="nft3.webp" alt="Legendary Egg">
-            <h2>Legendary Egg</h2>
+            <h3>Legendary Egg</h3>
             <p class="price">0.273 BNB</p>
             <p class="txt-overflow">The third of three eggs, a legendary egg ensures you a fish of legendary rarity which is the highest rarity that exists in the world of Crypto Fishing.</p>
             <p><button>Buy</button></p>
         </div>
-        <div class="card">
+        <div class="collage-col">
             <img src="nft0.webp" alt="Empty fish tank">
-            <h2>Fish tank</h2>
+            <h3>Fish tank</h3>
             <p class="price">0.821 BNB</p>
             <p class="txt-overflow">An empty fish tank to raise your fish.</p>
             <p><button>Buy</button></p>
