@@ -1,46 +1,110 @@
 <!DOCTYPE html>
 <html>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Play to earn fish game">
     <meta name="keywords" content="NFT, blockchain, CFG, BNB, Binance">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="timeline.css">
 
     <title>Crypto Fishing</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+
+      html {
+        margin:0;
+        min-width: 100%;
+        min-height: 100%;
+        background: linear-gradient(-45deg, salmon, DeepPink, DodgerBlue, turquoise);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: white;
+        font-family: Helvetica, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      @keyframes gradient {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+      }
+
+      h1 {
+        font-family: Slackey, sans-serif;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: Slackey, sans-serif;
+        text-align: center;
+      }
+
+      h3 {
+        font-family: Slackey, sans-serif;
+        text-align: center;
+      }
+
+      hr {
+        border: 1px transparent;
+        padding: 16px;
+      }
+
+      .txt-overflow {
+        overflow: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+
+      .txt-overflow::-webkit-scrollbar {
+        display: none;
+      }
+
+    </style>
 
 </head>
 
 <body>
 
-    <div class="navbar">
-        <a style="width:25%" href="#home"><i class="fa fa-home"></i> Home</a>
-        <a style="width:25%" href="#nft">NFT</a>
-        <a style="width:25%" href="#roadmap">Roadmap</a>
-        <a style="width:25%" href="whitepaper.pdf">Whitepaper</a>
+    <div class="w3-top">
+      <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+          <a href="#home" class="w3-button w3-block w3-black">HOME</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#nft" class="w3-button w3-block w3-black">NFT</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#roadmap" class="w3-button w3-block w3-black">ROADMAP</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="whitepaper.pdf" class="w3-button w3-block w3-black">WHITEPAPER</a>
+        </div>
+      </div>
     </div>
 
-    <div class="main" id="home">
+    <div class="w3-main w3-content w3-padding" id="home">
 
-    <div class="centered-box">
-        <img src="logo.webp">
-        <h2>A blockchain game with a fish theme</h2>
+    <div class="w3-center w3-padding-64">
+        <img class="w3-image" src="logo.webp" alt="Crypto Fishing">
+        <h2 class="w3-xxxlarge w3-animate-top">A blockchain game with a fish theme</h2>
         <button class="btn-glow" style="width:200px;height:64px;font-size:32px">Presale</button>
     </div>
 
     <hr>
 
-    <div class="centered-box">
-        <p>
+    <div class="w3-center w3-padding-16">
+        <p style="font-size: 32px;">
         Crypto Fishing is an NFT play-to-earn game with a fish theme, in which you can perform multiple tasks with them such as raising, caring, battles and other tasks.<br>
         </p>
-        <p>
+        <p style="font-size: 32px;">
         Coming soon on your favorite app store.<br>
         <img style="vertical-align:middle;margin:32px 0px" src="apple.webp" alt="Apple">
         <img style="vertical-align:middle;margin:32px 0px" src="android.webp" alt="Android">
@@ -51,16 +115,16 @@
     <hr>
 
     <h2>SCREENSHOTS</h2>
-    <div class="collage-row">
-        <div class="collage-col">
+    <div class="w3-row-padding w3-padding-16 w3-center">
+        <div class="w3-third">
             <img src="1.webp" style="width:100%">
             <img src="2.webp" style="width:100%">
         </div>
-        <div class="collage-col">
+        <div class="w3-third">
             <img src="3.webp" style="width:100%">
             <img src="4.webp" style="width:100%">
         </div>
-        <div class="collage-col">
+        <div class="w3-third">
             <img src="5.webp" style="width:100%">
             <img src="6.webp" style="width:100%">
         </div>
@@ -69,35 +133,45 @@
     <hr id="nft">
 
     <h2>NFT PORTFOLIO</h2>
-    <p>Check out available NFTs to start gaming.</p>
-    <div class="collage-row">
-        <div class="collage-col">
-            <img src="nft1.webp" alt="Common Egg">
+    <p style="font-size: 32px;text-align: center;">
+      Check out available NFTs to start gaming.
+    </p>
+    <div class="w3-row-padding w3-padding-16 w3-center">
+        <div class="w3-quarter">
+            <img src="nft1.webp" alt="Common Egg" style="width:100%">
             <h3>Common Egg</h3>
-            <p class="price">0.091 BNB</p>
-            <p class="txt-overflow">The first of three eggs, a common egg ensures you a common rarity fish that is the lowest rarity.</p>
-            <p><button class="btn-glow" style="width:100px;height:50px;font-size:24px">Buy</button></p>
+            <p style="color:gold;font-size: 32px;"><strong>0.091 BNB</strong></p>
+            <p class="txt-overflow" style="min-height: 96px;max-height: 96px;">
+              The first of three eggs, a common egg ensures you a common rarity fish that is the lowest rarity.
+            </p>
+            <button class="btn-glow">Buy</button>
         </div>
-        <div class="collage-col">
-            <img src="nft2.webp" alt="Epic Egg">
+        <div class="w3-quarter">
+            <img src="nft2.webp" alt="Epic Egg" style="width:100%">
             <h3>Epic Egg</h3>
-            <p class="price">0.182 BNB</p>
-            <p class="txt-overflow">The second of three eggs. An epic egg guarantees you a fish of epic rarity which is the intermediate rarity.</p>
-            <p><button class="btn-glow" style="width:100px;height:50px;font-size:24px">Buy</button></p>
+            <p style="color:gold;font-size: 32px;"><strong>0.182 BNB</strong></p>
+            <p class="txt-overflow" style="min-height: 96px;max-height: 96px;">
+              The second of three eggs. An epic egg guarantees you a fish of epic rarity which is the intermediate rarity.
+            </p>
+            <button class="btn-glow">Buy</button>
         </div>
-        <div class="collage-col">
-            <img src="nft3.webp" alt="Legendary Egg">
+        <div class="w3-quarter">
+            <img src="nft3.webp" alt="Legendary Egg" style="width:100%">
             <h3>Legendary Egg</h3>
-            <p class="price">0.273 BNB</p>
-            <p class="txt-overflow">The third of three eggs, a legendary egg ensures you a fish of legendary rarity which is the highest rarity that exists in the world of Crypto Fishing.</p>
-            <p><button class="btn-glow" style="width:100px;height:50px;font-size:24px">Buy</button></p>
+            <p style="color:gold;font-size: 32px;"><strong>0.273 BNB</strong></p>
+            <p class="txt-overflow" style="min-height: 96px;max-height: 96px;">
+              The third of three eggs, a legendary egg ensures you a fish of legendary rarity which is the highest rarity that exists in the world of Crypto Fishing.
+            </p>
+            <button class="btn-glow">Buy</button>
         </div>
-        <div class="collage-col">
-            <img src="nft0.webp" alt="Empty fish tank">
+        <div class="w3-quarter">
+            <img src="nft0.webp" alt="Empty fish tank" style="width:100%">
             <h3>Fish tank</h3>
-            <p class="price">0.821 BNB</p>
-            <p class="txt-overflow">An empty fish tank to raise your fish.</p>
-            <p><button class="btn-glow" style="width:100px;height:50px;font-size:24px">Buy</button></p>
+            <p style="color:gold;font-size: 32px;"><strong>0.821 BNB</strong></p>
+            <p class="txt-overflow" style="min-height: 96px;max-height: 96px;">
+              An empty fish tank to raise your fish.
+            </p>
+            <button class="btn-glow">Buy</button>
         </div>
     </div>
 
@@ -157,48 +231,19 @@
       </div>
     </div>
 
+    <!--
+
     <hr>
 
     <h2>TOKENOMICS</h2>
-    <div class="centered-box">
+    <div class="w3-center w3-padding-16">
         <canvas id="rewards" style="width:80%"></canvas>
     </div>
 
-    <script>
-        var xValues = ["IDO Listing", "Public Sale", "Liquidity Pool", "Advisors", "Team", "Marketing", "FEG Anti Deep Pool", "Airdrop"];
-        var yValues = [10, 20, 20, 10, 10, 7, 13, 10];
-        var barColors = [
-        "maroon",
-        "fuchsia",
-        "cyan",
-        "ForestGreen",
-        "gold",
-        "indigo",
-        "DarkSlateGray",
-        "salmon"
-        ];
+    -->
 
-        Chart.defaults.global.defaultFontColor = 'white';
-        new Chart("rewards", {
-        type: "pie",
-        data: {
-            labels: xValues,
-            datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-            }]
-        },
-        options: {
-            title: {
-            display: true,
-            text: ""
-            }
-        }
-        });
-    </script>
-
-    <div class="footer">
-      <p>Join the conversation 😎</p>
+    <div class="w3-center w3-padding-64">
+      <p style="font-family: Slackey, sans-serif;font-size: 24px;">Join the conversation 😎</p>
       <a href="https://twitter.com/CryptoFishingio"><img src="twitter.webp" alt="Twitter"></a>
       <a href="https://t.me/Crypt0Fishingbot?start=r08875315470"><img src="telegram.webp" alt="Telegram"></a>
     </div>
