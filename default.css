@@ -28,6 +28,8 @@ h3 {font-family: Slackey, sans-serif;text-align: center;}
 
 hr {border: 1px transparent;padding: 16px;}
 
+.img-circle{border-radius:100%}
+
 .blur {
 filter: blur(8px);
 -webkit-filter: blur(8px);
