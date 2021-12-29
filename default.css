@@ -1,4 +1,5 @@
-@font-face {font-family: FreeSans;src: url(FreeSans.woff2);}
+@font-face {font-family: NimbusSans;src: url(NimbusSans-Regular.woff2);}
+@font-face {font-family: NimbusSans;src: url(NimbusSans-Bold.woff2);font-weight: bold;}
 
 @import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
@@ -19,7 +20,7 @@ scroll-behavior: smooth;
 100% {background-position: 0% 50%;}
 }
 
-body {color: white;font-family: FreeSans;}
+body {color: white;font-family: NimbusSans;}
 
 h1 {font-family: Slackey, sans-serif;text-align: center;}
 h2 {font-family: Slackey, sans-serif;text-align: center;}
