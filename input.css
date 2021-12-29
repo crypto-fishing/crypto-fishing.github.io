@@ -1,0 +1,15 @@
+input[type=number] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 16px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFD700;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=number]:focus {width: 40%;}

@@ -1,0 +1,43 @@
+@font-face {font-family: FreeSans;src: url(FreeSans.woff2);}
+
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+
+html {
+margin:0;
+min-width: 100%;
+min-height: 100%;
+background: linear-gradient(-45deg, salmon, DeepPink, DodgerBlue, turquoise);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+0% {background-position: 0% 50%;}
+50% {background-position: 100% 50%;}
+100% {background-position: 0% 50%;}
+}
+
+body {color: white;font-family: FreeSans;}
+
+h1 {font-family: Slackey, sans-serif;text-align: center;}
+h2 {font-family: Slackey, sans-serif;text-align: center;}
+h3 {font-family: Slackey, sans-serif;text-align: center;}
+
+hr {border: 1px transparent;padding: 16px;}
+
+.blur {
+filter: blur(8px);
+-webkit-filter: blur(8px);
+}
+
+.dark-alpha {background-color: rgba(0,0,0, 0.4);}
+
+.txt-overflow {
+overflow: auto;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.txt-overflow::-webkit-scrollbar {display: none;}

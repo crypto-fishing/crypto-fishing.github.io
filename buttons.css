@@ -5,10 +5,9 @@
     padding: 5px 20px;
     text-align: center;
     text-decoration: none;
+    color: white;
     margin: 4px 2px;
     cursor: pointer;
-    font-family: Helvetica, sans-serif;
-    color: white;
     position: relative;
     z-index: 0;
 }
@@ -30,17 +29,11 @@
     border-radius: 16px;
 }
 
-.btn-glow:active {
-    color: black;
-}
+.btn-glow:active {color: black;}
 
-.btn-glow:active:after {
-    background: transparent;
-}
+.btn-glow:active:after {background: transparent;}
 
-.btn-glow:hover:before {
-    opacity: 1;
-}
+.btn-glow:hover:before {opacity: 1;}
 
 .btn-glow:after {
     z-index: -1;

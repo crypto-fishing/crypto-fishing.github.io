@@ -1,0 +1,22 @@
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0,0,0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    z-index: 1;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255,255,255, 0.4);
+    color: black;
+}

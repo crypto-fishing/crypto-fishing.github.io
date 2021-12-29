@@ -21,15 +21,6 @@ html {
     100% {background-position: 0% 50%;}
 }
 
-* {
-    box-sizing: border-box;
-}
-
-img {
-    max-width:100%;
-    height:auto;
-}
-
 .navbar {
     overflow: hidden;
     background-color: #333;
