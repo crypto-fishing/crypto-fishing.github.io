@@ -1,0 +1,5 @@
+[Dolphin]
+SortRole=type
+Timestamp=2022,1,6,11,41,12.247
+Version=4
+VisibleRoles=Details_text,Details_size,Details_modificationtime,Details_type,CustomizedDetails

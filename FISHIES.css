@@ -1,0 +1,93 @@
+/*******************
+* FISH PROPERTIES *
+*******************/
+.Mleft{
+    position: absolute;
+    border-radius:50%;
+    top:45%;
+    left:45%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -webkit-transition: 1s ease-out;
+    transition: 1s ease-out;
+    width: 50px;
+}
+#o_fish{
+    display: none;
+}
+#o_fish-path{
+    fill: white;
+}
+.Oleft{
+    display: inline;
+    position:absolute;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    top:45%;
+    left:45%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -webkit-transition: 3s ease-out;
+    transition: 3s ease-out;
+}
+.Oright{
+    position:absolute;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    top:45%;
+    left:45%;
+    -webkit-transition: 3s ease-out;
+    transition: 3s ease-out;
+}
+
+/***********************************************
+    * Everything unrelated to the fish animations *
+    ***********************************************/
+/* hidden */
+.hide{
+    display: none;
+}
+/* coordinate box */
+#coord{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+/* eat count */
+#eaten{
+    position: absolute;
+    text-align: center;
+    right: 50%;
+    top: 10px;
+}
+/* Button 1 */
+#FishIt{
+    position: absolute;
+    right: 50%;
+    bottom: 10px;
+    color: #3465a4;
+    border-radius: 5px;
+}
+/* toggle for darkmode */
+#darkToggle{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+/* toggle Dark Mode */
+.darken{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+/* Prevent scrolling away */
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body{
+    background-color: #A8DBFB;
+}

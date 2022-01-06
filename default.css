@@ -20,7 +20,7 @@ scroll-behavior: smooth;
 100% {background-position: 0% 50%;}
 }
 
-body {color: white;font-family: NimbusSans;}
+body {color: white;font-family: NimbusSans, Helvetica, sans-serif;}
 
 h1 {font-family: Slackey, sans-serif;text-align: center;}
 h2 {font-family: Slackey, sans-serif;text-align: center;}

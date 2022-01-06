@@ -1,15 +1,107 @@
 <!DOCTYPE html>
 <!-- saved from url=(0053)https://onehtmlpagechallenge.com/entries/fishies.html -->
-<html><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <link rel="shortcut icon" href="https://onehtmlpagechallenge.com/entries/favicon.gif" type="image/gif">
-  <link rel="stylesheet" href="game.css">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="shortcut icon" href="https://onehtmlpagechallenge.com/entries/favicon.gif" type="image/gif">
+
   <meta name="description" content="Fishies swimming">
   <meta name="keywords" content="fish, game, animation">
   <meta name="author" content="William Chung">
   
   <title>FISHIES</title>
+  <style type="text/css" media="screen">
+    /*******************
+     * FISH PROPERTIES *
+     *******************/
+    .Mleft{
+      position: absolute;
+      border-radius:50%;
+      top:45%;
+      left:45%;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      -webkit-transition: 1s ease-out;
+      transition: 1s ease-out;
+      width: 50px;
+    }
+    #o_fish{
+      display: none;
+    }
+    #o_fish-path{
+      fill: white;
+    }
+    .Oleft{
+      display: inline;
+      position:absolute;
+      width:25px;
+      height:25px;
+      border-radius:50%;
+      top:45%;
+      left:45%;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      -webkit-transition: 3s ease-out;
+      transition: 3s ease-out;
+    }
+    .Oright{
+      position:absolute;
+      width:25px;
+      height:25px;
+      border-radius:50%;
+      top:45%;
+      left:45%;
+      -webkit-transition: 3s ease-out;
+      transition: 3s ease-out;
+    }
 
+    /***********************************************
+     * Everything unrelated to the fish animations *
+     ***********************************************/
+    /* hidden */
+    .hide{
+      display: none;
+    }
+    /* coordinate box */
+    #coord{
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    }
+    /* eat count */
+    #eaten{
+      position: absolute;
+      text-align: center;
+      right: 50%;
+      top: 10px;
+    }
+    /* Button 1 */
+    #FishIt{
+      position: absolute;
+      right: 50%;
+      bottom: 10px;
+      color: #3465a4;
+      border-radius: 5px;
+    }
+    /* toggle for darkmode */
+    #darkToggle{
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    /* toggle Dark Mode */
+    .darken{
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+    }
+
+    /* Prevent scrolling away */
+    html {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    body{
+      background-color: #A8DBFB;
+    }
+  </style>
   <script type="text/javascript">
     // Variables
     var fX = -25;               // X variable for how centered the main fish will be
@@ -259,7 +351,7 @@
     }
   </script>
 </head>
-<body>
+<body style="background: rgb(168, 219, 251);">
   <img id="Mfish" class="Mleft" src="data:image/svg+xml;charset=UTF-8, %3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; id=&#39;Mfish&#39; viewBox=&#39;0 0 15.870892 11.059746&#39;%3E%3Cg transform=&#39;translate(-0.32264107,-285.34704)&#39; id=&#39;Mfish-layer1&#39;%3E%3Cpath id=&#39;Mfish-path&#39; d=&#39;m 12.590442,294.97791 c -0.87312,-0.58043 -1.73126,-1.056 -1.90698,-1.05683 -0.17571,-8.4e-4 -0.8107108,0.36829 -1.4111088,0.82025 -0.755888,0.56902 -1.639909,0.84466 -2.874293,0.89622 -1.553455,0.0649 -1.990642,-0.0844 -3.400232,-1.16065 -2.71028989,-2.06946 -3.25563889,-5.23582 -1.238506,-7.1909 1.068351,-1.03549 1.352333,-1.12754 3.478548,-1.12754 1.887825,0 2.555142,0.16281 3.614844,0.88195 0.71479,0.48507 1.5147378,0.88194 1.7776678,0.88194 0.26293,0 1.31315,-0.56198 2.33382,-1.24884 1.25286,-0.84311 1.97186,-1.13276 2.21308,-0.89154 0.58592,0.58592 0.59236,8.52129 0.008,9.46052 -0.62745,1.00793 -0.68986,1.00156 -2.59452,-0.26458 z m -3.5277768,-2.47894 0.881945,-1.06668 1.9177418,1.23679 c 1.05475,0.68023 1.94896,1.20018 1.98714,1.15544 0.0382,-0.0447 -0.0113,-1.29718 -0.10999,-2.78322 l -0.17939,-2.70188 -1.10219,0.67209 c -1.50463,0.91748 -2.9117138,0.84748 -4.1651478,-0.20721 -0.850821,-0.71592 -1.428215,-0.88195 -3.067175,-0.88195 -2.255711,0 -2.865711,0.38905 -2.865711,1.82772 0,0.7536 0.205541,1.03265 0.886526,1.20356 0.487589,0.12238 1.101526,0.0441 1.364305,-0.17401 0.361246,-0.29981 0.587115,-0.26478 0.92605,0.14361 0.368589,0.44412 0.335835,0.66437 -0.184258,1.23907 -0.347892,0.38442 -0.885739,0.70399 -1.195216,0.71016 -0.456217,0.009 -0.429183,0.11445 0.142871,0.55678 1.142249,0.88323 3.671572,0.38917 4.762499,-0.93027 z m -4.543654,-2.93796 c -0.307422,-0.37042 -0.287644,-0.58323 0.08278,-0.89065 0.370421,-0.30742 0.583224,-0.28764 0.890645,0.0828 0.307422,0.37042 0.287644,0.58322 -0.08278,0.89064 -0.37042,0.30743 -0.583223,0.28765 -0.890644,-0.0828 z&#39; /%3E%3C/g%3E%3C/svg%3E" style="left: 777px; top: 110px; transform: scaleX(-1) scale(2.65687); transition: all 0.5s ease-out 0s;">
 
   <!-- inline svg of background fish for easy JS manipulation -->
@@ -271,7 +363,11 @@
 
 <div id="coord" class=""></div>
 <div id="eaten" class="">You've eaten 7 fishies</div>
-
+<div id="darkToggle" class="">
+  <input id="toggleBox0" type="checkbox" onchange="darkThis(this)"><label for="toggleBox0">Dark Mode</label><br>
+  <input id="toggleBox1" type="checkbox" onchange="constaSpawn(this)"><label for="toggleBox1">ConstaSpawn</label>
+</div>
+<button id="FishIt" onclick="moreFish();" class="">Spawn More Fish</button>
 <!-- Script for checkboxes -->
 <script type="text/javascript" class="">
   // Dark mode stuff
